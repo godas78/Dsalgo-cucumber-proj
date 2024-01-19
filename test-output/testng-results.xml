@@ -2,30 +2,30 @@
 <testng-results ignored="0" total="0" passed="0" failed="0" skipped="0">
   <reporter-output>
   </reporter-output>
-  <suite started-at="2024-01-17T15:35:14 PST" name="Default suite" finished-at="2024-01-17T15:35:14 PST" duration-ms="120">
+  <suite started-at="2024-01-19T14:36:42 PST" name="Suite" finished-at="2024-01-19T14:36:42 PST" duration-ms="128">
     <groups>
       <group name="cucumber">
-        <method signature="AbstractTestNGCucumberTests.runScenario(io.cucumber.testng.PickleWrapper,io.cucumber.testng.FeatureWrapper)[pri:0, instance:testrunners.MyTestRunner@1b765a2c]" name="runScenario" class="io.cucumber.testng.AbstractTestNGCucumberTests"/>
+        <method signature="AbstractTestNGCucumberTests.runScenario(io.cucumber.testng.PickleWrapper,io.cucumber.testng.FeatureWrapper)[pri:0, instance:testrunners.MyTestRunner@12bd8a64]" name="runScenario" class="io.cucumber.testng.AbstractTestNGCucumberTests"/>
       </group> <!-- cucumber -->
     </groups>
-    <test started-at="2024-01-17T15:35:14 PST" name="Default test" finished-at="2024-01-17T15:35:14 PST" duration-ms="120">
+    <test started-at="2024-01-19T14:36:42 PST" name="Test" finished-at="2024-01-19T14:36:42 PST" duration-ms="128">
       <class name="testrunners.MyTestRunner">
-        <test-method is-config="true" signature="setUpClass(org.testng.ITestContext)[pri:0, instance:testrunners.MyTestRunner@1b765a2c]" started-at="2024-01-17T15:35:14 PST" name="setUpClass" finished-at="2024-01-17T15:35:14 PST" duration-ms="87" status="PASS">
+        <test-method is-config="true" signature="setUpClass(org.testng.ITestContext)[pri:0, instance:testrunners.MyTestRunner@12bd8a64]" started-at="2024-01-19T14:36:42 PST" name="setUpClass" finished-at="2024-01-19T14:36:42 PST" duration-ms="97" status="PASS">
           <params>
             <param index="0">
               <value>
-                <![CDATA[org.testng.TestRunner@2102a4d5]]>
+                <![CDATA[org.testng.TestRunner@46cf05f7]]>
               </value>
             </param>
           </params>
           <reporter-output>
           </reporter-output>
         </test-method> <!-- setUpClass -->
-        <test-method is-config="true" signature="tearDownClass()[pri:0, instance:testrunners.MyTestRunner@1b765a2c]" started-at="2024-01-17T15:35:14 PST" name="tearDownClass" finished-at="2024-01-17T15:35:14 PST" duration-ms="2" status="PASS">
+        <test-method is-config="true" signature="tearDownClass()[pri:0, instance:testrunners.MyTestRunner@12bd8a64]" started-at="2024-01-19T14:36:42 PST" name="tearDownClass" finished-at="2024-01-19T14:36:42 PST" duration-ms="2" status="PASS">
           <reporter-output>
           </reporter-output>
         </test-method> <!-- tearDownClass -->
       </class> <!-- testrunners.MyTestRunner -->
-    </test> <!-- Default test -->
-  </suite> <!-- Default suite -->
+    </test> <!-- Test -->
+  </suite> <!-- Suite -->
 </testng-results>

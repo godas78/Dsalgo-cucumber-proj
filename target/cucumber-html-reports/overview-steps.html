@@ -1,0 +1,1037 @@
+<!DOCTYPE html>
+<html>
+<head>
+
+<meta http-equiv="Content-Type" content="text/html; charset=UTF-8" />
+
+<script src="js/jquery.min.js"></script>
+<script src="js/jquery.tablesorter.min.js"></script>
+<script src="js/Chart.min.js"></script>
+<script src="js/moment.min.js"></script>
+<script src="js/bootstrap.min.js"></script>
+
+<link rel="stylesheet" href="css/bootstrap.min.css" type="text/css"/>
+<link rel="stylesheet" href="css/cucumber.css" type="text/css"/>
+<link rel="stylesheet" href="css/font-awesome.min.css"/>
+<link rel="shortcut icon" href="images/favicon.png"/>
+
+<script>
+$(document).ready(function() {
+    // this will tell tablesorter to try looking for the data-value attribute
+    // if present, it'll sort by that instead
+    // otherwise, it'll sort by the text content of the table cell
+    $("#tablesorter").tablesorter({
+        textAttribute: 'data-value',
+        // ignores the first row of the header, the 'scenario', 'steps', since
+        // sorting those doesn't make sense
+        selectorHeaders: '> thead tr:not(.dont-sort) th',
+        // use a stable sort
+        sortStable: true
+    });
+});
+</script>
+
+
+
+
+
+
+
+
+
+
+
+<title>Cucumber Reports (no 1) - Steps Overview</title>
+
+</head>
+<body>
+
+<nav class="navbar navbar-default navbar-fixed-top" id="navigation">
+  <div class="container-fluid">
+    <div class="collapse navbar-collapse">
+      <p class="navbar-text navbar-left">Cucumber Report</p>
+      <ul class="nav navbar-nav navbar-right">
+        <li role="presentation" ><a href="overview-features.html">Features</a></li>
+        <li role="presentation" ><a href="overview-tags.html">Tags</a></li>
+        <li role="presentation"     class="active" ><a href="overview-steps.html">Steps</a></li>
+        <li role="presentation" ><a href="overview-failures.html">Failures</a></li>
+      </ul>
+    </div>
+  </div>
+</nav>
+
+
+<div class="container-fluid">
+  <div class="col-md-5 col-md-offset-1">
+
+<table class="table table-bordered" id="build-info">
+  <thead>
+    <tr>
+      <th>Project</th>
+        <th>Number</th>
+      <th>Date</th>
+    </tr>
+  </thead>
+  <tbody>
+    <tr class="info">
+      <td>Dsalgo_cucumber1</td>
+        <td>1</td>
+      <td>19 Jan 2024, 14:55</td>
+    </tr>
+  </tbody>
+</table>
+
+  </div>
+  <div class="col-md-3 col-md-offset-2">
+  </div>
+</div>
+
+
+<div id="report-lead" class="container-fluid">
+  <div class="col-md-10 col-md-offset-1">
+    <h2>Steps Statistics</h2>
+      <p>The following graph shows step statistics for this build. Below list is based on results.
+ step does not provide information about result then is not listed below.
+ Additionally @Before and @After are not counted because they are part of the scenarios, not steps.</p>
+  </div>
+</div>
+
+<div class="container-fluid" id="report">
+  <div class="row">
+    <div class="col-md-10 col-md-offset-1">
+      <table id="tablesorter" class="stats-table table-hover">
+
+        <thead>
+          <tr class="header">
+            <th>Implementation</th>
+            <th>Occurrences</th>
+            <th>Average duration</th>
+            <th>Max duration</th>
+            <th>Total durations</th>
+            <th>Ratio</th>
+          </tr>
+        </thead>
+
+        <tbody>
+            <tr>
+              <td class="location">AppHooks.ApplicationHooks.scenario(io.cucumber.java.Scenario)</td>
+              <td>127</td>
+              <td class="duration" data-value="131853">0.000</td>
+              <td class="duration" data-value="131853">0.002</td>
+              <td class="duration" data-value="16745400">0.016</td>
+              <td class="passed">100.00%</td>
+            </tr>
+            <tr>
+              <td class="location">stepDefinitions.DataStructureSteps.the_user_be_directed_to_page(java.lang.String)</td>
+              <td>1</td>
+              <td class="duration" data-value="4610700">0.004</td>
+              <td class="duration" data-value="4610700">0.004</td>
+              <td class="duration" data-value="4610700">0.004</td>
+              <td class="passed">100.00%</td>
+            </tr>
+            <tr>
+              <td class="location">stepDefinitions.DataStructureSteps.the_user_clicks_button_on_page()</td>
+              <td>1</td>
+              <td class="duration" data-value="683235200">0.683</td>
+              <td class="duration" data-value="683235200">0.683</td>
+              <td class="duration" data-value="683235200">0.683</td>
+              <td class="passed">100.00%</td>
+            </tr>
+            <tr>
+              <td class="location">stepDefinitions.DataStructureSteps.the_user_clicks_on_run_button()</td>
+              <td>2</td>
+              <td class="duration" data-value="30978650">0.030</td>
+              <td class="duration" data-value="30978650">0.031</td>
+              <td class="duration" data-value="61957300">0.061</td>
+              <td class="passed">100.00%</td>
+            </tr>
+            <tr>
+              <td class="location">stepDefinitions.DataStructureSteps.the_user_clicks_the_button_in_data_structure_page_introduction_panel(java.lang.String)</td>
+              <td>1</td>
+              <td class="duration" data-value="167551100">0.167</td>
+              <td class="duration" data-value="167551100">0.167</td>
+              <td class="duration" data-value="167551100">0.167</td>
+              <td class="passed">100.00%</td>
+            </tr>
+            <tr>
+              <td class="location">stepDefinitions.DataStructureSteps.the_user_clicks_time_complexity_link()</td>
+              <td>1</td>
+              <td class="duration" data-value="437753800">0.437</td>
+              <td class="duration" data-value="437753800">0.437</td>
+              <td class="duration" data-value="437753800">0.437</td>
+              <td class="passed">100.00%</td>
+            </tr>
+            <tr>
+              <td class="location">stepDefinitions.DataStructureSteps.the_user_enter_python_code_with_invalid_syntax_in_try_editor_from_sheet_and(java.lang.String,java.lang.Integer)</td>
+              <td>1</td>
+              <td class="duration" data-value="155382400">0.155</td>
+              <td class="duration" data-value="155382400">0.155</td>
+              <td class="duration" data-value="155382400">0.155</td>
+              <td class="passed">100.00%</td>
+            </tr>
+            <tr>
+              <td class="location">stepDefinitions.DataStructureSteps.the_user_enter_valid_python_code_in_try_editor_from_sheet_and(java.lang.String,java.lang.Integer)</td>
+              <td>1</td>
+              <td class="duration" data-value="203413000">0.203</td>
+              <td class="duration" data-value="203413000">0.203</td>
+              <td class="duration" data-value="203413000">0.203</td>
+              <td class="passed">100.00%</td>
+            </tr>
+            <tr>
+              <td class="location">stepDefinitions.DataStructureSteps.the_user_is_in_a_page_having_an_try_editor_with_a_run_button_to_test()</td>
+              <td>2</td>
+              <td class="duration" data-value="687192150">0.687</td>
+              <td class="duration" data-value="687192150">0.727</td>
+              <td class="duration" data-value="1374384300">1.374</td>
+              <td class="passed">100.00%</td>
+            </tr>
+            <tr>
+              <td class="location">stepDefinitions.DataStructureSteps.the_user_is_on_the_after_logged_in(java.lang.String)</td>
+              <td>55</td>
+              <td class="duration" data-value="264981">0.000</td>
+              <td class="duration" data-value="264981">0.003</td>
+              <td class="duration" data-value="14574000">0.014</td>
+              <td class="passed">100.00%</td>
+            </tr>
+            <tr>
+              <td class="location">stepDefinitions.DataStructureSteps.the_user_is_redirected_to_page(java.lang.String)</td>
+              <td>1</td>
+              <td class="duration" data-value="11925500">0.011</td>
+              <td class="duration" data-value="11925500">0.011</td>
+              <td class="duration" data-value="11925500">0.011</td>
+              <td class="passed">100.00%</td>
+            </tr>
+            <tr>
+              <td class="location">stepDefinitions.DataStructureSteps.the_user_should_be_presented_with_error_message()</td>
+              <td>1</td>
+              <td class="duration" data-value="4549800">0.004</td>
+              <td class="duration" data-value="4549800">0.004</td>
+              <td class="duration" data-value="4549800">0.004</td>
+              <td class="passed">100.00%</td>
+            </tr>
+            <tr>
+              <td class="location">stepDefinitions.DataStructureSteps.the_user_should_be_presented_with_run_result()</td>
+              <td>1</td>
+              <td class="duration" data-value="0">0.000</td>
+              <td class="duration" data-value="0">0.000</td>
+              <td class="duration" data-value="0">0.000</td>
+              <td class="passed">100.00%</td>
+            </tr>
+            <tr>
+              <td class="location">stepDefinitions.DataStructureSteps.the_user_should_be_redirected_to_a_page_having_an_try_editor_with_a_run_button_to_test()</td>
+              <td>22</td>
+              <td class="duration" data-value="8283254">0.008</td>
+              <td class="duration" data-value="8283254">0.022</td>
+              <td class="duration" data-value="182231600">0.182</td>
+              <td class="passed">100.00%</td>
+            </tr>
+            <tr>
+              <td class="location">stepDefinitions.HomeSteps.home_page_title_should_be(java.lang.String)</td>
+              <td>2</td>
+              <td class="duration" data-value="22476650">0.022</td>
+              <td class="duration" data-value="22476650">0.023</td>
+              <td class="duration" data-value="44953300">0.044</td>
+              <td class="passed">100.00%</td>
+            </tr>
+            <tr>
+              <td class="location">stepDefinitions.HomeSteps.now_click_on_get_started_without_login(java.lang.String)</td>
+              <td>7</td>
+              <td class="duration" data-value="2397372614">2.397</td>
+              <td class="duration" data-value="2397372614">2.433</td>
+              <td class="duration" data-value="16781608300">16.781</td>
+              <td class="passed">100.00%</td>
+            </tr>
+            <tr>
+              <td class="location">stepDefinitions.HomeSteps.the_user_clicks_on_dropdown(java.lang.String)</td>
+              <td>6</td>
+              <td class="duration" data-value="2655351983">2.655</td>
+              <td class="duration" data-value="2655351983">4.300</td>
+              <td class="duration" data-value="15932111900">15.932</td>
+              <td class="passed">100.00%</td>
+            </tr>
+            <tr>
+              <td class="location">stepDefinitions.HomeSteps.the_user_clicks_on_register_link()</td>
+              <td>2</td>
+              <td class="duration" data-value="194907850">0.194</td>
+              <td class="duration" data-value="194907850">0.198</td>
+              <td class="duration" data-value="389815700">0.389</td>
+              <td class="passed">100.00%</td>
+            </tr>
+            <tr>
+              <td class="location">stepDefinitions.HomeSteps.the_user_clicks_on_signin_link()</td>
+              <td>1</td>
+              <td class="duration" data-value="2221299000">2.221</td>
+              <td class="duration" data-value="2221299000">2.221</td>
+              <td class="duration" data-value="2221299000">2.221</td>
+              <td class="passed">100.00%</td>
+            </tr>
+            <tr>
+              <td class="location">stepDefinitions.HomeSteps.the_user_get_warning_message(java.lang.String)</td>
+              <td>13</td>
+              <td class="duration" data-value="20893176">0.020</td>
+              <td class="duration" data-value="20893176">0.052</td>
+              <td class="duration" data-value="271611300">0.271</td>
+              <td class="passed">100.00%</td>
+            </tr>
+            <tr>
+              <td class="location">stepDefinitions.HomeSteps.the_user_opens_ds_algo_portal_link()</td>
+              <td>2</td>
+              <td class="duration" data-value="207985800">0.207</td>
+              <td class="duration" data-value="207985800">0.214</td>
+              <td class="duration" data-value="415971600">0.415</td>
+              <td class="passed">100.00%</td>
+            </tr>
+            <tr>
+              <td class="location">stepDefinitions.HomeSteps.the_user_redirected_to_login_page()</td>
+              <td>1</td>
+              <td class="duration" data-value="17101800">0.017</td>
+              <td class="duration" data-value="17101800">0.017</td>
+              <td class="duration" data-value="17101800">0.017</td>
+              <td class="passed">100.00%</td>
+            </tr>
+            <tr>
+              <td class="location">stepDefinitions.HomeSteps.the_user_redirected_to_registration_page()</td>
+              <td>2</td>
+              <td class="duration" data-value="12515800">0.012</td>
+              <td class="duration" data-value="12515800">0.020</td>
+              <td class="duration" data-value="25031600">0.025</td>
+              <td class="passed">100.00%</td>
+            </tr>
+            <tr>
+              <td class="location">stepDefinitions.HomeSteps.user_click_on(java.lang.String)</td>
+              <td>2</td>
+              <td class="duration" data-value="2938607300">2.938</td>
+              <td class="duration" data-value="2938607300">3.671</td>
+              <td class="duration" data-value="5877214600">5.877</td>
+              <td class="passed">100.00%</td>
+            </tr>
+            <tr>
+              <td class="location">stepDefinitions.HomeSteps.user_is_on_homepage()</td>
+              <td>16</td>
+              <td class="duration" data-value="8692681">0.008</td>
+              <td class="duration" data-value="8692681">0.024</td>
+              <td class="duration" data-value="139082900">0.139</td>
+              <td class="passed">100.00%</td>
+            </tr>
+            <tr>
+              <td class="location">stepDefinitions.LinkedListSteps.the_user_clicks_button_in_the_page(java.lang.String,java.lang.String)</td>
+              <td>7</td>
+              <td class="duration" data-value="929208528">0.929</td>
+              <td class="duration" data-value="929208528">1.524</td>
+              <td class="duration" data-value="6504459700">6.504</td>
+              <td class="passed">100.00%</td>
+            </tr>
+            <tr>
+              <td class="location">stepDefinitions.LinkedListSteps.the_user_clicks_creating_linked_list_link()</td>
+              <td>1</td>
+              <td class="duration" data-value="636914900">0.636</td>
+              <td class="duration" data-value="636914900">0.636</td>
+              <td class="duration" data-value="636914900">0.636</td>
+              <td class="passed">100.00%</td>
+            </tr>
+            <tr>
+              <td class="location">stepDefinitions.LinkedListSteps.the_user_clicks_introduction_link()</td>
+              <td>2</td>
+              <td class="duration" data-value="629020450">0.629</td>
+              <td class="duration" data-value="629020450">0.708</td>
+              <td class="duration" data-value="1258040900">1.258</td>
+              <td class="passed">100.00%</td>
+            </tr>
+            <tr>
+              <td class="location">stepDefinitions.LinkedListSteps.the_user_clicks_on_the_practice_questions()</td>
+              <td>1</td>
+              <td class="duration" data-value="201367900">0.201</td>
+              <td class="duration" data-value="201367900">0.201</td>
+              <td class="duration" data-value="201367900">0.201</td>
+              <td class="passed">100.00%</td>
+            </tr>
+            <tr>
+              <td class="location">stepDefinitions.LinkedListSteps.the_user_clicks_the_Deletion_button()</td>
+              <td>1</td>
+              <td class="duration" data-value="778907000">0.778</td>
+              <td class="duration" data-value="778907000">0.778</td>
+              <td class="duration" data-value="778907000">0.778</td>
+              <td class="passed">100.00%</td>
+            </tr>
+            <tr>
+              <td class="location">stepDefinitions.LinkedListSteps.the_user_clicks_the_implement_linked_list_in_python_button()</td>
+              <td>1</td>
+              <td class="duration" data-value="690690200">0.690</td>
+              <td class="duration" data-value="690690200">0.690</td>
+              <td class="duration" data-value="690690200">0.690</td>
+              <td class="passed">100.00%</td>
+            </tr>
+            <tr>
+              <td class="location">stepDefinitions.LinkedListSteps.the_user_clicks_the_insertion_button()</td>
+              <td>1</td>
+              <td class="duration" data-value="711133400">0.711</td>
+              <td class="duration" data-value="711133400">0.711</td>
+              <td class="duration" data-value="711133400">0.711</td>
+              <td class="passed">100.00%</td>
+            </tr>
+            <tr>
+              <td class="location">stepDefinitions.LinkedListSteps.the_user_clicks_the_traversal_button()</td>
+              <td>1</td>
+              <td class="duration" data-value="734515100">0.734</td>
+              <td class="duration" data-value="734515100">0.734</td>
+              <td class="duration" data-value="734515100">0.734</td>
+              <td class="passed">100.00%</td>
+            </tr>
+            <tr>
+              <td class="location">stepDefinitions.LinkedListSteps.the_user_clicks_the_types_of_linked_list_button()</td>
+              <td>1</td>
+              <td class="duration" data-value="866630100">0.866</td>
+              <td class="duration" data-value="866630100">0.866</td>
+              <td class="duration" data-value="866630100">0.866</td>
+              <td class="passed">100.00%</td>
+            </tr>
+            <tr>
+              <td class="location">stepDefinitions.LinkedListSteps.the_user_enter_invalid_python_code_in_try_editor_from_sheet_and(java.lang.String,java.lang.Integer)</td>
+              <td>7</td>
+              <td class="duration" data-value="174423428">0.174</td>
+              <td class="duration" data-value="174423428">0.196</td>
+              <td class="duration" data-value="1220964000">1.220</td>
+              <td class="passed">100.00%</td>
+            </tr>
+            <tr>
+              <td class="location">stepDefinitions.LinkedListSteps.the_user_enter_valid_python_code_in_try_editor_from_sheet_and(java.lang.String,java.lang.Integer)</td>
+              <td>7</td>
+              <td class="duration" data-value="232841485">0.232</td>
+              <td class="duration" data-value="232841485">0.311</td>
+              <td class="duration" data-value="1629890400">1.629</td>
+              <td class="passed">100.00%</td>
+            </tr>
+            <tr>
+              <td class="location">stepDefinitions.LinkedListSteps.the_user_get_the_error_message()</td>
+              <td>7</td>
+              <td class="duration" data-value="5511814">0.005</td>
+              <td class="duration" data-value="5511814">0.007</td>
+              <td class="duration" data-value="38582700">0.038</td>
+              <td class="passed">100.00%</td>
+            </tr>
+            <tr>
+              <td class="location">stepDefinitions.LinkedListSteps.the_user_is_in_a_try_here_page_having_try_editor_with_a_run_button_to_test()</td>
+              <td>14</td>
+              <td class="duration" data-value="320351664">0.320</td>
+              <td class="duration" data-value="320351664">0.381</td>
+              <td class="duration" data-value="4484923300">4.484</td>
+              <td class="passed">100.00%</td>
+            </tr>
+            <tr>
+              <td class="location">stepDefinitions.LinkedListSteps.the_user_redirected_to_page(java.lang.String)</td>
+              <td>2</td>
+              <td class="duration" data-value="5502600">0.005</td>
+              <td class="duration" data-value="5502600">0.005</td>
+              <td class="duration" data-value="11005200">0.011</td>
+              <td class="passed">100.00%</td>
+            </tr>
+            <tr>
+              <td class="location">stepDefinitions.LinkedListSteps.the_user_redirected_to_the_page_having_an_try_editor_with_a_run_button_to_test()</td>
+              <td>1</td>
+              <td class="duration" data-value="4022000">0.004</td>
+              <td class="duration" data-value="4022000">0.004</td>
+              <td class="duration" data-value="4022000">0.004</td>
+              <td class="passed">100.00%</td>
+            </tr>
+            <tr>
+              <td class="location">stepDefinitions.LinkedListSteps.the_user_selecting_linkedlist_item_from_the_drop_down_menu()</td>
+              <td>1</td>
+              <td class="duration" data-value="390524500">0.390</td>
+              <td class="duration" data-value="390524500">0.390</td>
+              <td class="duration" data-value="390524500">0.390</td>
+              <td class="passed">100.00%</td>
+            </tr>
+            <tr>
+              <td class="location">stepDefinitions.LinkedListSteps.the_user_should_be_directed_to_of_linked_list_page(java.lang.String)</td>
+              <td>6</td>
+              <td class="duration" data-value="5554716">0.005</td>
+              <td class="duration" data-value="5554716">0.010</td>
+              <td class="duration" data-value="33328300">0.033</td>
+              <td class="passed">100.00%</td>
+            </tr>
+            <tr>
+              <td class="location">stepDefinitions.LinkedListSteps.the_user_should_be_directed_to_practice_questions_of_linked_list_page()</td>
+              <td>1</td>
+              <td class="duration" data-value="5544600">0.005</td>
+              <td class="duration" data-value="5544600">0.005</td>
+              <td class="duration" data-value="5544600">0.005</td>
+              <td class="passed">100.00%</td>
+            </tr>
+            <tr>
+              <td class="location">stepDefinitions.LinkedListSteps.the_user_should_be_presented_with_the_run_output()</td>
+              <td>7</td>
+              <td class="duration" data-value="10813300">0.010</td>
+              <td class="duration" data-value="10813300">0.012</td>
+              <td class="duration" data-value="75693100">0.075</td>
+              <td class="passed">100.00%</td>
+            </tr>
+            <tr>
+              <td class="location">stepDefinitions.LinkedListSteps.user_click_on_run_button()</td>
+              <td>14</td>
+              <td class="duration" data-value="30475121">0.030</td>
+              <td class="duration" data-value="30475121">0.041</td>
+              <td class="duration" data-value="426651700">0.426</td>
+              <td class="passed">100.00%</td>
+            </tr>
+            <tr>
+              <td class="location">stepDefinitions.LoginSteps.click_login_button()</td>
+              <td>1</td>
+              <td class="duration" data-value="470205900">0.470</td>
+              <td class="duration" data-value="470205900">0.470</td>
+              <td class="duration" data-value="470205900">0.470</td>
+              <td class="passed">100.00%</td>
+            </tr>
+            <tr>
+              <td class="location">stepDefinitions.LoginSteps.the_user_click_on_login_button()</td>
+              <td>103</td>
+              <td class="duration" data-value="426129606">0.426</td>
+              <td class="duration" data-value="426129606">0.555</td>
+              <td class="duration" data-value="43891349500">43.891</td>
+              <td class="passed">100.00%</td>
+            </tr>
+            <tr>
+              <td class="location">stepDefinitions.LoginSteps.the_user_enter_sheet_and(java.lang.String,java.lang.Integer)</td>
+              <td>1</td>
+              <td class="duration" data-value="486303300">0.486</td>
+              <td class="duration" data-value="486303300">0.486</td>
+              <td class="duration" data-value="486303300">0.486</td>
+              <td class="passed">100.00%</td>
+            </tr>
+            <tr>
+              <td class="location">stepDefinitions.LoginSteps.the_user_enter_valid_and(java.lang.String,java.lang.String)</td>
+              <td>103</td>
+              <td class="duration" data-value="150623979">0.150</td>
+              <td class="duration" data-value="150623979">0.229</td>
+              <td class="duration" data-value="15514269900">15.514</td>
+              <td class="passed">100.00%</td>
+            </tr>
+            <tr>
+              <td class="location">stepDefinitions.LoginSteps.the_user_is_on_signin_page()</td>
+              <td>1</td>
+              <td class="duration" data-value="177914800">0.177</td>
+              <td class="duration" data-value="177914800">0.177</td>
+              <td class="duration" data-value="177914800">0.177</td>
+              <td class="passed">100.00%</td>
+            </tr>
+            <tr>
+              <td class="location">stepDefinitions.LoginSteps.the_user_is_on_signin_page_of_ds_algo_portal()</td>
+              <td>103</td>
+              <td class="duration" data-value="157662756">0.157</td>
+              <td class="duration" data-value="157662756">0.549</td>
+              <td class="duration" data-value="16239263900">16.239</td>
+              <td class="passed">100.00%</td>
+            </tr>
+            <tr>
+              <td class="location">stepDefinitions.LoginSteps.the_user_logged_in_successfully()</td>
+              <td>5</td>
+              <td class="duration" data-value="0">0.000</td>
+              <td class="duration" data-value="0">0.000</td>
+              <td class="duration" data-value="0">0.000</td>
+              <td class="passed">100.00%</td>
+            </tr>
+            <tr>
+              <td class="location">stepDefinitions.LoginSteps.the_user_redirected_to_homepage()</td>
+              <td>98</td>
+              <td class="duration" data-value="116548">0.000</td>
+              <td class="duration" data-value="116548">0.001</td>
+              <td class="duration" data-value="11421800">0.011</td>
+              <td class="passed">100.00%</td>
+            </tr>
+            <tr>
+              <td class="location">stepDefinitions.Portalsteps.portal_page_title_should_be(java.lang.String)</td>
+              <td>1</td>
+              <td class="duration" data-value="2925900">0.002</td>
+              <td class="duration" data-value="2925900">0.002</td>
+              <td class="duration" data-value="2925900">0.002</td>
+              <td class="passed">100.00%</td>
+            </tr>
+            <tr>
+              <td class="location">stepDefinitions.Portalsteps.user_gets_title_of_the_page()</td>
+              <td>1</td>
+              <td class="duration" data-value="7531700">0.007</td>
+              <td class="duration" data-value="7531700">0.007</td>
+              <td class="duration" data-value="7531700">0.007</td>
+              <td class="passed">100.00%</td>
+            </tr>
+            <tr>
+              <td class="location">stepDefinitions.Portalsteps.user_is_on_portalpage()</td>
+              <td>1</td>
+              <td class="duration" data-value="615881600">0.615</td>
+              <td class="duration" data-value="615881600">0.615</td>
+              <td class="duration" data-value="615881600">0.615</td>
+              <td class="passed">100.00%</td>
+            </tr>
+            <tr>
+              <td class="location">stepDefinitions.Registersteps.it_should_display_an_error_message(java.lang.String)</td>
+              <td>2</td>
+              <td class="duration" data-value="41824300">0.041</td>
+              <td class="duration" data-value="41824300">0.047</td>
+              <td class="duration" data-value="83648600">0.083</td>
+              <td class="passed">100.00%</td>
+            </tr>
+            <tr>
+              <td class="location">stepDefinitions.Registersteps.it_should_display_an_error_message_below_password_confirmation_textbox(java.lang.String)</td>
+              <td>1</td>
+              <td class="duration" data-value="126180200">0.126</td>
+              <td class="duration" data-value="126180200">0.126</td>
+              <td class="duration" data-value="126180200">0.126</td>
+              <td class="passed">100.00%</td>
+            </tr>
+            <tr>
+              <td class="location">stepDefinitions.Registersteps.it_should_display_an_error_message_below_password_textbox(java.lang.String)</td>
+              <td>1</td>
+              <td class="duration" data-value="801900">0.000</td>
+              <td class="duration" data-value="801900">0.000</td>
+              <td class="duration" data-value="801900">0.000</td>
+              <td class="passed">100.00%</td>
+            </tr>
+            <tr>
+              <td class="location">stepDefinitions.Registersteps.the_user_clicks_button_after_entering_and_with_password_confirmation_field_empty(java.lang.String,java.lang.String,java.lang.String,io.cucumber.datatable.DataTable)</td>
+              <td>1</td>
+              <td class="duration" data-value="2153935800">2.153</td>
+              <td class="duration" data-value="2153935800">2.153</td>
+              <td class="duration" data-value="2153935800">2.153</td>
+              <td class="passed">100.00%</td>
+            </tr>
+            <tr>
+              <td class="location">stepDefinitions.Registersteps.the_user_clicks_button_after_entering_username_with_other_fields_empty(java.lang.String,io.cucumber.datatable.DataTable)</td>
+              <td>1</td>
+              <td class="duration" data-value="2119460700">2.119</td>
+              <td class="duration" data-value="2119460700">2.119</td>
+              <td class="duration" data-value="2119460700">2.119</td>
+              <td class="passed">100.00%</td>
+            </tr>
+            <tr>
+              <td class="location">stepDefinitions.Registersteps.the_user_clicks_button_after_entering_valid_and_different_passwords_in_and_fields(java.lang.String,java.lang.String,java.lang.String,java.lang.String,io.cucumber.datatable.DataTable)</td>
+              <td>1</td>
+              <td class="duration" data-value="2322170400">2.322</td>
+              <td class="duration" data-value="2322170400">2.322</td>
+              <td class="duration" data-value="2322170400">2.322</td>
+              <td class="passed">100.00%</td>
+            </tr>
+            <tr>
+              <td class="location">stepDefinitions.Registersteps.the_user_enters_a_valid_and_and(java.lang.String,java.lang.String,java.lang.String,io.cucumber.datatable.DataTable)</td>
+              <td>1</td>
+              <td class="duration" data-value="2357683700">2.357</td>
+              <td class="duration" data-value="2357683700">2.357</td>
+              <td class="duration" data-value="2357683700">2.357</td>
+              <td class="passed">100.00%</td>
+            </tr>
+            <tr>
+              <td class="location">stepDefinitions.Registersteps.the_user_enters_a_with_characters_other_than_letters_digits_and(java.lang.String,java.lang.String,io.cucumber.datatable.DataTable)</td>
+              <td>1</td>
+              <td class="duration" data-value="2350211000">2.350</td>
+              <td class="duration" data-value="2350211000">2.350</td>
+              <td class="duration" data-value="2350211000">2.350</td>
+              <td class="passed">100.00%</td>
+            </tr>
+            <tr>
+              <td class="location">stepDefinitions.Registersteps.the_user_opens_register_page()</td>
+              <td>5</td>
+              <td class="duration" data-value="183012720">0.183</td>
+              <td class="duration" data-value="183012720">0.233</td>
+              <td class="duration" data-value="915063600">0.915</td>
+              <td class="passed">100.00%</td>
+            </tr>
+            <tr>
+              <td class="location">stepDefinitions.Registersteps.the_user_should_be_redirected_to_homepage_with_the_message(java.lang.String)</td>
+              <td>1</td>
+              <td class="duration" data-value="13112100">0.013</td>
+              <td class="duration" data-value="13112100">0.013</td>
+              <td class="duration" data-value="13112100">0.013</td>
+              <td class="failed">0.00%</td>
+            </tr>
+            <tr>
+              <td class="location">stepDefinitions.StackSteps.the_user_clicks_button_in_page(java.lang.String,java.lang.String)</td>
+              <td>3</td>
+              <td class="duration" data-value="703481466">0.703</td>
+              <td class="duration" data-value="703481466">0.729</td>
+              <td class="duration" data-value="2110444400">2.110</td>
+              <td class="passed">100.00%</td>
+            </tr>
+            <tr>
+              <td class="location">stepDefinitions.StackSteps.the_user_clicks_on_run_button_after_entering_invalid_python_code_in_stack_try_editor()</td>
+              <td>3</td>
+              <td class="duration" data-value="27925933">0.027</td>
+              <td class="duration" data-value="27925933">0.030</td>
+              <td class="duration" data-value="83777800">0.083</td>
+              <td class="passed">100.00%</td>
+            </tr>
+            <tr>
+              <td class="location">stepDefinitions.StackSteps.the_user_clicks_on_run_button_after_entering_valid_python_code_in_stack_try_editor()</td>
+              <td>3</td>
+              <td class="duration" data-value="32045300">0.032</td>
+              <td class="duration" data-value="32045300">0.035</td>
+              <td class="duration" data-value="96135900">0.096</td>
+              <td class="passed">100.00%</td>
+            </tr>
+            <tr>
+              <td class="location">stepDefinitions.StackSteps.the_user_clicks_on_the_applications_button()</td>
+              <td>1</td>
+              <td class="duration" data-value="446666500">0.446</td>
+              <td class="duration" data-value="446666500">0.446</td>
+              <td class="duration" data-value="446666500">0.446</td>
+              <td class="passed">100.00%</td>
+            </tr>
+            <tr>
+              <td class="location">stepDefinitions.StackSteps.the_user_clicks_on_the_implementation_button()</td>
+              <td>1</td>
+              <td class="duration" data-value="605147600">0.605</td>
+              <td class="duration" data-value="605147600">0.605</td>
+              <td class="duration" data-value="605147600">0.605</td>
+              <td class="passed">100.00%</td>
+            </tr>
+            <tr>
+              <td class="location">stepDefinitions.StackSteps.the_user_clicks_on_the_operations_in_stack_link()</td>
+              <td>1</td>
+              <td class="duration" data-value="690043700">0.690</td>
+              <td class="duration" data-value="690043700">0.690</td>
+              <td class="duration" data-value="690043700">0.690</td>
+              <td class="passed">100.00%</td>
+            </tr>
+            <tr>
+              <td class="location">stepDefinitions.StackSteps.the_user_clicks_on_the_practice_questions_button()</td>
+              <td>1</td>
+              <td class="duration" data-value="546316700">0.546</td>
+              <td class="duration" data-value="546316700">0.546</td>
+              <td class="duration" data-value="546316700">0.546</td>
+              <td class="passed">100.00%</td>
+            </tr>
+            <tr>
+              <td class="location">stepDefinitions.StackSteps.the_user_gets_input_from_sheet_and(java.lang.String,java.lang.Integer)</td>
+              <td>3</td>
+              <td class="duration" data-value="198616500">0.198</td>
+              <td class="duration" data-value="198616500">0.205</td>
+              <td class="duration" data-value="595849500">0.595</td>
+              <td class="passed">100.00%</td>
+            </tr>
+            <tr>
+              <td class="location">stepDefinitions.StackSteps.the_user_gets_invalid_input_from_sheet_and(java.lang.String,java.lang.Integer)</td>
+              <td>3</td>
+              <td class="duration" data-value="159806166">0.159</td>
+              <td class="duration" data-value="159806166">0.165</td>
+              <td class="duration" data-value="479418500">0.479</td>
+              <td class="passed">100.00%</td>
+            </tr>
+            <tr>
+              <td class="location">stepDefinitions.StackSteps.the_user_is_in_stack_page_having_an_try_editor_with_a_run_button_to_test()</td>
+              <td>6</td>
+              <td class="duration" data-value="305020783">0.305</td>
+              <td class="duration" data-value="305020783">0.327</td>
+              <td class="duration" data-value="1830124700">1.830</td>
+              <td class="passed">100.00%</td>
+            </tr>
+            <tr>
+              <td class="location">stepDefinitions.StackSteps.the_user_selects_stack_item_from_the_drop_down_menu()</td>
+              <td>1</td>
+              <td class="duration" data-value="233984400">0.233</td>
+              <td class="duration" data-value="233984400">0.233</td>
+              <td class="duration" data-value="233984400">0.233</td>
+              <td class="passed">100.00%</td>
+            </tr>
+            <tr>
+              <td class="location">stepDefinitions.StackSteps.the_user_should_be_directed_to_applications_page()</td>
+              <td>1</td>
+              <td class="duration" data-value="6000700">0.006</td>
+              <td class="duration" data-value="6000700">0.006</td>
+              <td class="duration" data-value="6000700">0.006</td>
+              <td class="passed">100.00%</td>
+            </tr>
+            <tr>
+              <td class="location">stepDefinitions.StackSteps.the_user_should_be_directed_to_implementation_page()</td>
+              <td>1</td>
+              <td class="duration" data-value="4092100">0.004</td>
+              <td class="duration" data-value="4092100">0.004</td>
+              <td class="duration" data-value="4092100">0.004</td>
+              <td class="passed">100.00%</td>
+            </tr>
+            <tr>
+              <td class="location">stepDefinitions.StackSteps.the_user_should_be_directed_to_page(java.lang.String)</td>
+              <td>1</td>
+              <td class="duration" data-value="8378500">0.008</td>
+              <td class="duration" data-value="8378500">0.008</td>
+              <td class="duration" data-value="8378500">0.008</td>
+              <td class="passed">100.00%</td>
+            </tr>
+            <tr>
+              <td class="location">stepDefinitions.StackSteps.the_user_should_be_directed_to_practice_questions_page()</td>
+              <td>1</td>
+              <td class="duration" data-value="6025000">0.006</td>
+              <td class="duration" data-value="6025000">0.006</td>
+              <td class="duration" data-value="6025000">0.006</td>
+              <td class="passed">100.00%</td>
+            </tr>
+            <tr>
+              <td class="location">stepDefinitions.StackSteps.the_user_should_be_presented_with_error_output()</td>
+              <td>3</td>
+              <td class="duration" data-value="5990866">0.005</td>
+              <td class="duration" data-value="5990866">0.011</td>
+              <td class="duration" data-value="17972600">0.017</td>
+              <td class="passed">100.00%</td>
+            </tr>
+            <tr>
+              <td class="location">stepDefinitions.StackSteps.the_user_should_be_presented_with_run_output()</td>
+              <td>3</td>
+              <td class="duration" data-value="11328666">0.011</td>
+              <td class="duration" data-value="11328666">0.013</td>
+              <td class="duration" data-value="33986000">0.033</td>
+              <td class="passed">100.00%</td>
+            </tr>
+            <tr>
+              <td class="location">stepDefinitions.StackSteps.the_user_should_then_be_directed_to_page(java.lang.String)</td>
+              <td>1</td>
+              <td class="duration" data-value="4104900">0.004</td>
+              <td class="duration" data-value="4104900">0.004</td>
+              <td class="duration" data-value="4104900">0.004</td>
+              <td class="passed">100.00%</td>
+            </tr>
+            <tr>
+              <td class="location">stepDefinitions.TreeSteps.the_user_clicks_button_in_a_page(java.lang.String,java.lang.String)</td>
+              <td>13</td>
+              <td class="duration" data-value="834921253">0.834</td>
+              <td class="duration" data-value="834921253">1.221</td>
+              <td class="duration" data-value="10853976300">10.853</td>
+              <td class="passed">100.00%</td>
+            </tr>
+            <tr>
+              <td class="location">stepDefinitions.TreeSteps.the_user_clicks_on_run_button_after_entering_invalid_python_code_in_trees_try_editor()</td>
+              <td>13</td>
+              <td class="duration" data-value="28008946">0.028</td>
+              <td class="duration" data-value="28008946">0.032</td>
+              <td class="duration" data-value="364116300">0.364</td>
+              <td class="passed">100.00%</td>
+            </tr>
+            <tr>
+              <td class="location">stepDefinitions.TreeSteps.the_user_clicks_on_run_button_after_entering_valid_python_code_in_trees_try_editor()</td>
+              <td>13</td>
+              <td class="duration" data-value="29229123">0.029</td>
+              <td class="duration" data-value="29229123">0.037</td>
+              <td class="duration" data-value="379978600">0.379</td>
+              <td class="passed">100.00%</td>
+            </tr>
+            <tr>
+              <td class="location">stepDefinitions.TreeSteps.the_user_clicks_on_the_Applications_of_Binary_Trees_button()</td>
+              <td>1</td>
+              <td class="duration" data-value="549318800">0.549</td>
+              <td class="duration" data-value="549318800">0.549</td>
+              <td class="duration" data-value="549318800">0.549</td>
+              <td class="passed">100.00%</td>
+            </tr>
+            <tr>
+              <td class="location">stepDefinitions.TreeSteps.the_user_clicks_on_the_Binary_Search_Trees_button()</td>
+              <td>1</td>
+              <td class="duration" data-value="972893100">0.972</td>
+              <td class="duration" data-value="972893100">0.972</td>
+              <td class="duration" data-value="972893100">0.972</td>
+              <td class="passed">100.00%</td>
+            </tr>
+            <tr>
+              <td class="location">stepDefinitions.TreeSteps.the_user_clicks_on_the_Implementaion_in_Python_button()</td>
+              <td>1</td>
+              <td class="duration" data-value="551226700">0.551</td>
+              <td class="duration" data-value="551226700">0.551</td>
+              <td class="duration" data-value="551226700">0.551</td>
+              <td class="passed">100.00%</td>
+            </tr>
+            <tr>
+              <td class="location">stepDefinitions.TreeSteps.the_user_clicks_on_the_Implementation_of_BST_button()</td>
+              <td>1</td>
+              <td class="duration" data-value="582078900">0.582</td>
+              <td class="duration" data-value="582078900">0.582</td>
+              <td class="duration" data-value="582078900">0.582</td>
+              <td class="passed">100.00%</td>
+            </tr>
+            <tr>
+              <td class="location">stepDefinitions.TreeSteps.the_user_clicks_on_the_Implementation_of_Binary_Trees_button()</td>
+              <td>1</td>
+              <td class="duration" data-value="615727000">0.615</td>
+              <td class="duration" data-value="615727000">0.615</td>
+              <td class="duration" data-value="615727000">0.615</td>
+              <td class="passed">100.00%</td>
+            </tr>
+            <tr>
+              <td class="location">stepDefinitions.TreeSteps.the_user_clicks_on_the_Traversal_illustration_button()</td>
+              <td>1</td>
+              <td class="duration" data-value="854456000">0.854</td>
+              <td class="duration" data-value="854456000">0.854</td>
+              <td class="duration" data-value="854456000">0.854</td>
+              <td class="passed">100.00%</td>
+            </tr>
+            <tr>
+              <td class="location">stepDefinitions.TreeSteps.the_user_clicks_on_the_binary_tree_traversals_button()</td>
+              <td>1</td>
+              <td class="duration" data-value="672823700">0.672</td>
+              <td class="duration" data-value="672823700">0.672</td>
+              <td class="duration" data-value="672823700">0.672</td>
+              <td class="passed">100.00%</td>
+            </tr>
+            <tr>
+              <td class="location">stepDefinitions.TreeSteps.the_user_clicks_on_the_binary_trees_button()</td>
+              <td>1</td>
+              <td class="duration" data-value="636777700">0.636</td>
+              <td class="duration" data-value="636777700">0.636</td>
+              <td class="duration" data-value="636777700">0.636</td>
+              <td class="passed">100.00%</td>
+            </tr>
+            <tr>
+              <td class="location">stepDefinitions.TreeSteps.the_user_clicks_on_the_overview_of_trees_link()</td>
+              <td>2</td>
+              <td class="duration" data-value="548421950">0.548</td>
+              <td class="duration" data-value="548421950">0.604</td>
+              <td class="duration" data-value="1096843900">1.096</td>
+              <td class="passed">100.00%</td>
+            </tr>
+            <tr>
+              <td class="location">stepDefinitions.TreeSteps.the_user_clicks_on_the_practice_questions_in_overview_of_trees()</td>
+              <td>1</td>
+              <td class="duration" data-value="701294600">0.701</td>
+              <td class="duration" data-value="701294600">0.701</td>
+              <td class="duration" data-value="701294600">0.701</td>
+              <td class="passed">100.00%</td>
+            </tr>
+            <tr>
+              <td class="location">stepDefinitions.TreeSteps.the_user_clicks_on_the_terminologies_button()</td>
+              <td>1</td>
+              <td class="duration" data-value="652299500">0.652</td>
+              <td class="duration" data-value="652299500">0.652</td>
+              <td class="duration" data-value="652299500">0.652</td>
+              <td class="passed">100.00%</td>
+            </tr>
+            <tr>
+              <td class="location">stepDefinitions.TreeSteps.the_user_clicks_on_the_tree_traversals_button()</td>
+              <td>1</td>
+              <td class="duration" data-value="623708200">0.623</td>
+              <td class="duration" data-value="623708200">0.623</td>
+              <td class="duration" data-value="623708200">0.623</td>
+              <td class="passed">100.00%</td>
+            </tr>
+            <tr>
+              <td class="location">stepDefinitions.TreeSteps.the_user_clicks_on_the_types_of_binary_trees_button()</td>
+              <td>1</td>
+              <td class="duration" data-value="771207200">0.771</td>
+              <td class="duration" data-value="771207200">0.771</td>
+              <td class="duration" data-value="771207200">0.771</td>
+              <td class="passed">100.00%</td>
+            </tr>
+            <tr>
+              <td class="location">stepDefinitions.TreeSteps.the_user_clicks_on_the_types_of_trees_button()</td>
+              <td>1</td>
+              <td class="duration" data-value="624295100">0.624</td>
+              <td class="duration" data-value="624295100">0.624</td>
+              <td class="duration" data-value="624295100">0.624</td>
+              <td class="passed">100.00%</td>
+            </tr>
+            <tr>
+              <td class="location">stepDefinitions.TreeSteps.the_user_gets_input_from_sheet_and_in_trees(java.lang.String,java.lang.Integer)</td>
+              <td>13</td>
+              <td class="duration" data-value="206764261">0.206</td>
+              <td class="duration" data-value="206764261">0.257</td>
+              <td class="duration" data-value="2687935400">2.687</td>
+              <td class="passed">100.00%</td>
+            </tr>
+            <tr>
+              <td class="location">stepDefinitions.TreeSteps.the_user_gets_invalid_input_from_sheet_and_in_trees(java.lang.String,java.lang.Integer)</td>
+              <td>13</td>
+              <td class="duration" data-value="167741938">0.167</td>
+              <td class="duration" data-value="167741938">0.193</td>
+              <td class="duration" data-value="2180645200">2.180</td>
+              <td class="passed">100.00%</td>
+            </tr>
+            <tr>
+              <td class="location">stepDefinitions.TreeSteps.the_user_is_in_trees_page_having_an_try_editor_with_a_run_button_to_test()</td>
+              <td>26</td>
+              <td class="duration" data-value="309915538">0.309</td>
+              <td class="duration" data-value="309915538">0.352</td>
+              <td class="duration" data-value="8057804000">8.057</td>
+              <td class="passed">100.00%</td>
+            </tr>
+            <tr>
+              <td class="location">stepDefinitions.TreeSteps.the_user_selects_tree_item_from_the_drop_down_menu()</td>
+              <td>1</td>
+              <td class="duration" data-value="287330500">0.287</td>
+              <td class="duration" data-value="287330500">0.287</td>
+              <td class="duration" data-value="287330500">0.287</td>
+              <td class="passed">100.00%</td>
+            </tr>
+            <tr>
+              <td class="location">stepDefinitions.TreeSteps.the_user_should_be_directed_to_practice_questions_of_tree_page_page()</td>
+              <td>1</td>
+              <td class="duration" data-value="5022400">0.005</td>
+              <td class="duration" data-value="5022400">0.005</td>
+              <td class="duration" data-value="5022400">0.005</td>
+              <td class="passed">100.00%</td>
+            </tr>
+            <tr>
+              <td class="location">stepDefinitions.TreeSteps.the_user_should_be_directed_to_the_of_tree_page(java.lang.String)</td>
+              <td>13</td>
+              <td class="duration" data-value="4871423">0.004</td>
+              <td class="duration" data-value="4871423">0.008</td>
+              <td class="duration" data-value="63328500">0.063</td>
+              <td class="passed">100.00%</td>
+            </tr>
+            <tr>
+              <td class="location">stepDefinitions.TreeSteps.the_user_should_be_directed_to_the_page(java.lang.String)</td>
+              <td>1</td>
+              <td class="duration" data-value="4001000">0.004</td>
+              <td class="duration" data-value="4001000">0.004</td>
+              <td class="duration" data-value="4001000">0.004</td>
+              <td class="passed">100.00%</td>
+            </tr>
+            <tr>
+              <td class="location">stepDefinitions.TreeSteps.the_user_should_be_presented_with_run_output_for_trees()</td>
+              <td>13</td>
+              <td class="duration" data-value="10635900">0.010</td>
+              <td class="duration" data-value="10635900">0.014</td>
+              <td class="duration" data-value="138266700">0.138</td>
+              <td class="passed">100.00%</td>
+            </tr>
+            <tr>
+              <td class="location">stepDefinitions.TreeSteps.the_user_should_be_redirected_to_a_page_having_try_editor_with_a_run_button_to_test()</td>
+              <td>1</td>
+              <td class="duration" data-value="4022900">0.004</td>
+              <td class="duration" data-value="4022900">0.004</td>
+              <td class="duration" data-value="4022900">0.004</td>
+              <td class="passed">100.00%</td>
+            </tr>
+            <tr>
+              <td class="location">stepDefinitions.TreeSteps.the_user_should_get_the_error_message_for_trees()</td>
+              <td>13</td>
+              <td class="duration" data-value="3772869">0.003</td>
+              <td class="duration" data-value="3772869">0.004</td>
+              <td class="duration" data-value="49047300">0.049</td>
+              <td class="passed">100.00%</td>
+            </tr>
+        </tbody>
+
+        <tfoot class="total">
+          <tr>
+            <td>111</td>
+            <td>973</td>
+            <td class="duration">0.204</td>
+            <td class="duration">43.891</td>
+            <td class="duration">3:18.776</td>
+            <td>Totals</td>
+          </tr>
+        </tfoot>
+
+      </table>
+    </div>
+  </div>
+</div>
+
+
+<nav class="navbar navbar-default" id="footer">
+  <div class="container-fluid">
+    <p class="navbar-text navbar-right">
+        <small>generate Cucumber HTML reports via:&nbsp;</small>
+        <a class="navbar-link" href="https://github.com/jenkinsci/cucumber-reports-plugin">Jenkins Plugin</a> |
+        <a class="navbar-link" href="https://github.com/damianszczepanik/cucumber-reporting">Standalone</a> |
+        <a class="navbar-link" href="https://github.com/damianszczepanik/cucumber-sandwich">Sandwich</a> |
+        <a class="navbar-link" href="https://github.com/damianszczepanik/maven-cucumber-reporting">Maven</a>
+        &nbsp;&nbsp;
+    </p>
+  </div>
+</nav>
+
+</body>
+</html>
