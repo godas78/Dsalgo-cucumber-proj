@@ -1,0 +1,15 @@
+Manifest-Version: 1.0
+Bundle-ManifestVersion: 2
+Bundle-Name: Dsalgo_cucumber1
+Bundle-SymbolicName: Dsalgo_cucumber1;singleton:=true
+Bundle-Version: 1.0.0.qualifier
+Bundle-RequiredExecutionEnvironment: JavaSE-17
+Automatic-Module-Name: Dsalgo.cucumber1
+Bundle-ActivationPolicy: lazy
+Export-Package: AppHooks,
+ com.pages,
+ com.qa.factory,
+ com.qa.util,
+ stepDefinitions,
+ testrunners
+Import-Package: com.pages
