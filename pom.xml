@@ -5,11 +5,11 @@
 	xsi:schemaLocation="http://maven.apache.org/POM/4.0.0 http://maven.apache.org/xsd/maven-4.0.0.xsd">
 	<modelVersion>4.0.0</modelVersion>
 
-	<groupId>Dsalgo_cucumber1</groupId>
-	<artifactId>Dsalgo_cucumber1</artifactId>
+	<groupId>Dsalgo_winterchamps</groupId>
+	<artifactId>Dsalgo_winterchamps</artifactId>
 	<version>0.0.1-SNAPSHOT</version>
 
-	<name>Dsalgo_cucumber1</name>
+	<name>Dsalgo_winterchamps</name>
 	<!-- FIXME change it to the project's website -->
 	<url>http://www.example.com</url>
 
@@ -202,7 +202,7 @@
 							<goal>generate</goal>
 						</goals>
 						<configuration>
-							<projectName>Dsalgo_cucumber1</projectName>
+							<projectName>Dsalgo_winterchamps</projectName>
 							<!-- optional, per documentation set this to
 								"true" to bypass generation of Cucumber Reports
 								entirely, defaults to false if not specified -->

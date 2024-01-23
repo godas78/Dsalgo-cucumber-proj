@@ -12,8 +12,8 @@ import org.testng.annotations.DataProvider;
 @CucumberOptions(
 		features = {"src/test/resources/AppFeatures"},
 		glue = {"stepDefinitions", "AppHooks"},
-		plugin = {"summary","pretty", "html:target/report/cucumber-reports.html",
-				"json:target/report/cucumber-reports.json",
+		plugin = {"summary","pretty", "html:target/cucumber-reports.html",
+				"json:target/cucumber-reports.json",
 				"junit:target/cucumber.xml",
 				"io.qameta.allure.cucumber7jvm.AllureCucumber7Jvm",
 				"com.aventstack.extentreports.cucumber.adapter.ExtentCucumberAdapter:",
